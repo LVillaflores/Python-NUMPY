@@ -16,22 +16,22 @@
 
 import numpy as np
 
-n = int(int(input("Enter values: ")))
-print("Enter Matrix variables; ")
+n = int(int(input("Enter number of variables: ")))
+print("Enter Matrix variables: ")
 matrix1 = []
 matrix2 = []
 
 for i in range(n):  # Row Entries
-  a = []
-  for j in range(n + 1):  # Column Entries
-    if j == n:
-      matrix2.append(int(input()))
-    else:
-      a.append(int(input))
-  matrix1.append(a)
+	a = []
+	for j in range(n + 1):  # Column Entries
+		if j == n:
+			matrix2.append(int(input()))
+		else:
+			a.append(int(input()))
+	matrix1.append(a)
 
 print(matrix1)
 print(matrix2)
 
-X4 = np.linalg.solve(matrix1, matrix2)
-print("Answer: " + X4)
+X = np.linalg.solve(matrix1, matrix2)
+print("Answer: " + X)
