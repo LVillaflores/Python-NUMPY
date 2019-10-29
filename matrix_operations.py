@@ -34,4 +34,4 @@ print(matrix1)
 print(matrix2)
 
 X = np.linalg.solve(matrix1, matrix2)
-print("Answer: " + X)
+print("Answer: ", X)
