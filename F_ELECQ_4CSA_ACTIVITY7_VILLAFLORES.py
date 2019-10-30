@@ -15,23 +15,24 @@
 #    x + 4y + 3z + 6u + 2v = 49
 
 import numpy as np
+
 print("System of Linear Equation: AX = B")
 n = int(int(input("Enter number of variables: ")))
 print("Enter Matrix variables: ")
 matrix1 = []
 matrix2 = []
 
-for i in range(n):  # Row Entries
-	X = []
-	for j in range(n + 1):  # Column Entries
+for i in range(n):
+	A = []
+	for j in range(n + 1):
 		if j == n:
 			matrix2.append(int(input("Enter Variable for B: ")))
 		else:
-			X.append(int(input("Enter Variables for A: ")))
-	matrix1.append(X)
+			A.append(int(input("Enter Variables for A: ")))
+	matrix1.append(A)
 
-print(matrix1)
-print(matrix2)
+print(matrix1)  # A
+print(matrix2)  # B
 
 solved_matrix = np.linalg.solve(matrix1, matrix2)
-print("Answer: ", solved_matrix)
+print("Answer: ", solved_matrix)  # X
